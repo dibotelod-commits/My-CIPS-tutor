@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#00687a",
+                    "on-tertiary-container": "#7c858b",
+                    "tertiary-container": "#141d21",
+                    "on-surface": "#131b2e",
+                    "surface-dim": "#d2d9f4",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "surface-container-highest": "#dae2fd",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "surface-bright": "#faf8ff",
+                    "on-primary-fixed": "#131b2e",
+                    "surface-tint": "#565e74",
+                    "on-surface-variant": "#45464d",
+                    "on-secondary-fixed": "#001f26",
+                    "secondary-fixed": "#acedff",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "primary-fixed-dim": "#bec6e0",
+                    "outline-variant": "#c6c6cd",
+                    "on-tertiary-fixed": "#141d21",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eaedff",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#7c839b",
+                    "surface-container-high": "#e2e7ff",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#dbe4ea",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#57dffe",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "background": "#faf8ff",
+                    "inverse-on-surface": "#eef0ff",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "surface": "#faf8ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface mb-24">
+<!-- TopAppBar -->
+<header class="bg-[#faf8ff]/85 backdrop-blur-md fixed top-0 w-full z-50 shadow-[0_12px_32px_rgba(15,23,42,0.06)] flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="transition-all duration-200 active:scale-95 text-[#00687a]">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-['Inter'] font-bold text-lg tracking-tight text-[#0f172a]">Operations Management</h1>
+</div>
+<button class="transition-all duration-200 active:scale-95 text-[#45464d]">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<main class="pt-20 px-6 space-y-8">
+<!-- Hero Section -->
+<section class="space-y-4">
+<div class="space-y-1">
+<span class="font-label uppercase tracking-[0.05em] text-[10px] font-semibold text-secondary">Level 5 Module 9</span>
+<h2 class="text-3xl font-bold tracking-tight text-on-surface">L5M9: Operations Management</h2>
+</div>
+<div class="flex gap-3">
+<div class="bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/15 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="star">star</span>
+<span class="text-xs font-medium">6 Credits</span>
+</div>
+<div class="bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/15 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="timer">timer</span>
+<span class="text-xs font-medium">1.5 Hour Exam</span>
+</div>
+</div>
+<!-- Progress Card -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_12px_32px_rgba(15,23,42,0.06)] space-y-4">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<p class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Course Progression</p>
+<p class="text-xl font-bold">60 Hours of Learning</p>
+</div>
+<p class="text-secondary font-bold text-lg">75%</p>
+</div>
+<div class="w-full bg-surface-container-highest h-3 rounded-full overflow-hidden">
+<div class="h-full w-3/4 bg-gradient-to-r from-secondary to-secondary-container rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Section 1: Process Flow -->
+<section class="space-y-4">
+<h3 class="text-xl font-bold tracking-tight px-1">Process Flow</h3>
+<div class="bg-surface-container-low p-1 rounded-xl overflow-hidden">
+<div class="bg-surface-container-lowest p-6 rounded-[1.25rem] space-y-6">
+<p class="text-sm text-on-surface-variant leading-relaxed italic">The Input-Transformation-Output model represents the core operational cycle.</p>
+<div class="grid grid-cols-3 gap-2 relative">
+<div class="flex flex-col items-center gap-2 text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="input">input</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Inputs</span>
+</div>
+<div class="flex flex-col items-center gap-2 text-center">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-primary flex items-center justify-center shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined" data-icon="settings_accessibility">settings_accessibility</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Transformation</span>
+</div>
+<div class="flex flex-col items-center gap-2 text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="output">output</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter">Outputs</span>
+</div>
+<!-- Decorative Connectors -->
+<div class="absolute top-6 left-[30%] w-[10%] h-[1px] bg-outline-variant/30"></div>
+<div class="absolute top-6 left-[60%] w-[10%] h-[1px] bg-outline-variant/30"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Improvement Methodologies -->
+<section class="space-y-4">
+<h3 class="text-xl font-bold tracking-tight px-1">Improvement Methodologies</h3>
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-surface-container-low p-6 rounded-xl flex items-start gap-4 transition-all hover:bg-surface-container-high">
+<div class="bg-secondary/10 p-3 rounded-xl">
+<span class="material-symbols-outlined text-secondary" data-icon="trending_up">trending_up</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-bold text-lg">Kaizen</h4>
+<p class="text-sm text-on-surface-variant leading-snug">Continuous, incremental small-step improvements involving all employees.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl flex items-start gap-4 transition-all hover:bg-surface-container-high">
+<div class="bg-secondary/10 p-3 rounded-xl">
+<span class="material-symbols-outlined text-secondary" data-icon="bolt">bolt</span>
+</div>
+<div class="space-y-1">
+<h4 class="font-bold text-lg">Business Process Re-engineering</h4>
+<p class="text-sm text-on-surface-variant leading-snug">Radical redesign of core business processes to achieve dramatic improvements.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Quality Management -->
+<section class="space-y-4">
+<h3 class="text-xl font-bold tracking-tight px-1">Quality Management</h3>
+<div class="bg-surface-container-lowest border border-outline-variant/10 rounded-xl overflow-hidden shadow-sm">
+<div class="p-6 space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="verified">verified</span>
+<h4 class="font-bold">Total Quality Management (TQM)</h4>
+</div>
+<p class="text-sm text-on-surface-variant pl-9">A holistic approach focused on customer satisfaction and long-term success through quality.</p>
+</div>
+<div class="h-[1px] bg-outline-variant/10 mx-6"></div>
+<div class="p-6 space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="published_with_changes">published_with_changes</span>
+<h4 class="font-bold">PDCA Cycle</h4>
+</div>
+<div class="flex gap-2 pl-9">
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-1 rounded">PLAN</span>
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-1 rounded">DO</span>
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-1 rounded">CHECK</span>
+<span class="text-[10px] font-bold bg-surface-container-high px-2 py-1 rounded">ACT</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Failure Prevention -->
+<section class="space-y-4 pb-12">
+<h3 class="text-xl font-bold tracking-tight px-1">Failure Prevention</h3>
+<div class="columns-2 gap-4 space-y-4">
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm break-inside-avoid space-y-2">
+<span class="text-secondary material-symbols-outlined" data-icon="error_outline">error_outline</span>
+<h5 class="font-bold text-sm">FMEA</h5>
+<p class="text-[11px] text-on-surface-variant">Failure Mode and Effects Analysis to identify potential risks.</p>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm break-inside-avoid space-y-2">
+<span class="text-secondary material-symbols-outlined" data-icon="filter_6">filter_6</span>
+<h5 class="font-bold text-sm">Six Sigma</h5>
+<p class="text-[11px] text-on-surface-variant">Statistical method to eliminate defects to 3.4 per million.</p>
+</div>
+<div class="bg-secondary text-on-primary p-4 rounded-xl shadow-lg shadow-secondary/20 break-inside-avoid space-y-2">
+<span class="material-symbols-outlined" data-icon="lock_reset">lock_reset</span>
+<h5 class="font-bold text-sm">Poka Yoke</h5>
+<p class="text-[11px] text-white/80">Mistake-proofing techniques to prevent human error.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-[#ffffff]/85 backdrop-blur-md fixed bottom-0 w-full flex justify-around items-center px-4 pb-6 h-20 z-50 shadow-[0_-12px_32px_rgba(15,23,42,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#45464d] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Inter'] uppercase text-[10px] tracking-[0.05em] font-medium mt-1">Library</span>
+</a>
+<!-- Active Tab: Practice/Modules (Modules requested as active in prompt) -->
+<a class="flex flex-col items-center justify-center text-[#06b6d4] border-b-2 border-[#06b6d4] pb-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span class="font-['Inter'] uppercase text-[10px] tracking-[0.05em] font-medium mt-1">Practice</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#45464d] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-['Inter'] uppercase text-[10px] tracking-[0.05em] font-medium mt-1">Insights</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#45464d] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] uppercase text-[10px] tracking-[0.05em] font-medium mt-1">Profile</span>
+</a>
+</nav>
+<!-- Contextual FAB -->
+<button class="fixed bottom-24 right-6 w-14 h-14 rounded-full bg-gradient-to-tr from-secondary to-secondary-container text-on-primary shadow-xl shadow-secondary/30 flex items-center justify-center active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined" data-icon="edit_square">edit_square</span>
+</button>
+</body></html>

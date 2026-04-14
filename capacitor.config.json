@@ -1,1 +1,11 @@
-{"appId":"com.cips.tutor","appName":"CIPS Tutor","webDir":"dist","server":{"androidScheme":"https"},"android":{"allowMixedContent":true},"plugins":{"SplashScreen":{"launchShowDuration":0}}}
+{
+  "appId": "com.cips2026.revisionhub",
+  "appName": "CIPS 2026 Revision Hub",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}

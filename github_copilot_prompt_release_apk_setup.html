@@ -1,0 +1,33 @@
+# GitHub Copilot Prompt: Android APK Release Workflow
+
+**Role:** Expert DevOps Engineer & Android Specialist
+**Context:** I am working on a Capacitor-based Android project for the "CIPS 2026 Revision Hub". I have a GitHub Actions workflow partially set up as shown in my recent screenshot (Commit: eef0c49). I need to finish the setup to build, sign, and upload a release-ready APK.
+
+**Task:** Help me complete the following steps:
+
+1. **GitHub Secrets Configuration:** 
+   - Explain how to generate a secure keystore file using the command line.
+   - Provide a step-by-step guide on how to add `KEYSTORE_FILE` (as a base64 string), `KEY_ALIAS`, and `KEY_PASSWORD` to GitHub Actions secrets.
+   - Show me the shell command to convert a `.jks` file to a base64 string for GitHub Secrets.
+
+2. **Workflow YAML Completion:**
+   - Review and provide a complete `.github/workflows/android_release.yml` file.
+   - Ensure it includes steps to:
+     - Set up JDK 11.
+     - Install dependencies (`npm install`).
+     - Build the web assets (`npm run build`).
+     - Sync Capacitor (`npx cap sync android`).
+     - Decode the `KEYSTORE_FILE` secret back into a file.
+     - Run `./gradlew assembleRelease`.
+     - Sign the APK using the provided secrets.
+     - Upload the signed APK (`app-release-signed.apk`) as an artifact.
+
+3. **Android 8.1 (API 27) Compatibility:**
+   - Double-check that the build process respects the `targetSdkVersion = 27` and `minSdkVersion = 21` requirements specified in my `variables.gradle`.
+
+**Constraints:**
+- Target Device: Snapdragon 450 (Huawei Y7 Prime 2019).
+- Platform: Android 8.1 (Oreo).
+- Tooling: Capacitor v3, GitHub Actions.
+
+Please provide the exact YAML code and the terminal commands for the keystore generation.

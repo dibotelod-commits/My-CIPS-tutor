@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">CIPS 2026 Revision Hub</string>
+    <string name="title_activity_main">CIPS 2026 Revision Hub</string>
+    <string name="package_name">com.cips2026.revisionhub</string>
+    <string name="custom_url_scheme">com.cips2026.revisionhub</string>
+</resources>

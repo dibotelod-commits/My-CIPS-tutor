@@ -1,0 +1,15 @@
+📚 CIPS Level 5 Advanced Diploma (2026 Revision) - Study MaterialsThis repository contains the extracted and organized study materials for the CIPS Level 5 modules: L5M4 (Advanced Contract & Financial Management) and L5M9 (Operations Management).📁 Folder Structurecips_revision_hub/
+│
+├── README.md                      # This overview file
+│
+├── 📝 notes/                      # Condensed revision notes
+│   ├── l5m4_key_concepts.md       # Strategic sourcing, KPIs, and Financials
+│   └── l5m9_key_concepts.md       # 4Vs, TQM, Six Sigma, and Process Layouts
+│
+├── 🧠 data/                       # Structured JSON data for the Practice Terminal
+│   ├── l5m4_quiz.json             # Practice questions & model answers for L5M4
+│   └── l5m9_quiz.json             # Practice questions & model answers for L5M9
+│
+└── 🌐 src/api/                    # API endpoints for remote material synchronization
+    └── api_config.js              # Fetch wrappers and endpoint configuration
+🚀 How to UseNotes (/notes): Use these markdown files for quick memorization of frameworks (Kraljic, DuPont, 4Vs, DMAIC).Data (/data): Feed these JSON files into your front-end application to power the "Interactive Practice Terminal".API (/src/api): Use the provided JavaScript configuration to sync new mock exams or updated study guides from a remote cloud database.

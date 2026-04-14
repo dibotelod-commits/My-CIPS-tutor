@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#dae2fd",
+                    "on-surface": "#131b2e",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "inverse-primary": "#bec6e0",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#d2d9f4",
+                    "surface-container": "#eaedff",
+                    "surface-bright": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "on-primary-container": "#7c839b",
+                    "surface-variant": "#dae2fd",
+                    "on-primary-fixed-variant": "#3f465c",
+                    "inverse-surface": "#283044",
+                    "on-tertiary-fixed": "#141d21",
+                    "surface": "#faf8ff",
+                    "primary-container": "#131b2e",
+                    "secondary-container": "#57dffe",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#45464d",
+                    "surface-container-low": "#f2f3ff",
+                    "outline": "#76777d",
+                    "secondary": "#00687a",
+                    "on-background": "#131b2e",
+                    "surface-tint": "#565e74",
+                    "surface-container-highest": "#dae2fd",
+                    "inverse-on-surface": "#eef0ff",
+                    "on-primary-fixed": "#131b2e",
+                    "on-secondary-fixed": "#001f26",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "tertiary-fixed": "#dbe4ea",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#141d21",
+                    "on-tertiary-container": "#7c858b",
+                    "on-primary": "#ffffff",
+                    "background": "#faf8ff",
+                    "outline-variant": "#c6c6cd",
+                    "primary": "#000000",
+                    "tertiary": "#000000",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "secondary-fixed": "#acedff",
+                    "surface-container-high": "#e2e7ff",
+                    "on-secondary-container": "#006172",
+                    "error-container": "#ffdad6",
+                    "primary-fixed-dim": "#bec6e0"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #00687a 0%, #57dffe 100%);
+        }
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface mb-24">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/85 dark:bg-slate-950/85 backdrop-blur-xl shadow-sm dark:shadow-none flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-cyan-600 dark:text-cyan-400 transition-opacity duration-200 active:opacity-70 cursor-pointer">menu</span>
+<span class="text-xl font-black text-slate-900 dark:text-slate-50 tracking-tighter">CIPS 2026</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center border border-outline-variant/20 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional male user avatar in a clean studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjh9-Q-RtZ-3SYAzZHRgEgrd0aIj1NUbINIup3Kq_CqTa65wq3Ps6oCqdw_GOP2oc26Kqkff6PqZjsZYexiPQINarHBULofdE2pnFs31Bn-UCmKcNjDyeSiS2r3_3OqajZmELZ4uOT_Ed5l7CrSj4ufIEUreLliJq3dHLDKDAv2scyubnNpUWk_4mowYZ3IizOmpaXkK6QcQpw5Nt864kVBSmWuztJpypY_LqwfJqdbpjPBHoKlhZC9ASNf-E6x-aHvo2CVxuq3m0"/>
+</div>
+</nav>
+<main class="pt-20 px-6 max-w-md mx-auto">
+<!-- Hero Header Section -->
+<header class="py-8">
+<span class="text-secondary font-bold tracking-[0.1em] uppercase text-xs mb-2 block">Executive Strategy</span>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-4 leading-none">Strategic Study Playbook</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed">Advanced cognitive frameworks for mastering procurement and supply chain governance.</p>
+</header>
+<!-- Playbook Sections -->
+<div class="space-y-8">
+<!-- Time Management Section -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-8 h-1 rounded-full bg-secondary"></div>
+<h2 class="text-sm font-black uppercase tracking-widest text-on-surface-variant">Time Management</h2>
+</div>
+<div class="bg-surface-container-lowest rounded-xl editorial-shadow p-6 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-cyan-500"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-cyan-50 rounded-lg">
+<span class="material-symbols-outlined text-cyan-600">schedule</span>
+</div>
+<span class="text-[10px] font-bold text-cyan-700 bg-cyan-100 px-2 py-0.5 rounded-full uppercase tracking-tighter">Priority 01</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-on-surface">The 90-Minute Sprint</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Focus on deep-work blocks aligned with CIPS exam durations to build cognitive endurance.</p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-cyan-500 text-lg mt-0.5">check_circle</span>
+<span class="text-sm font-medium text-on-surface-variant">45min reading, 15min practice, 30min review.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-cyan-500 text-lg mt-0.5">check_circle</span>
+<span class="text-sm font-medium text-on-surface-variant">Zero-distraction digital environment.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Understand the Why Section -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-8 h-1 rounded-full bg-secondary-container"></div>
+<h2 class="text-sm font-black uppercase tracking-widest text-on-surface-variant">Understand the Why</h2>
+</div>
+<div class="bg-surface-container-lowest rounded-xl editorial-shadow p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-slate-50 rounded-lg">
+<span class="material-symbols-outlined text-secondary">psychology</span>
+</div>
+<span class="text-[10px] font-bold text-secondary bg-secondary-container/20 px-2 py-0.5 rounded-full uppercase tracking-tighter">Strategic</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-on-surface">First Principles Sourcing</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Deconstruct procurement models to their core logic instead of rote memorization.</p>
+<ul class="space-y-3">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">lightbulb</span>
+<span class="text-sm font-medium text-on-surface-variant">Map every concept to a real-world P&amp;L impact.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">lightbulb</span>
+<span class="text-sm font-medium text-on-surface-variant">Challenge the status quo of the Kraljic Matrix.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- System Visualization Section -->
+<section class="space-y-4">
+<div class="flex items-center gap-2 mb-2">
+<div class="w-8 h-1 rounded-full bg-emerald-400"></div>
+<h2 class="text-sm font-black uppercase tracking-widest text-on-surface-variant">System Visualization</h2>
+</div>
+<div class="bg-surface-container-lowest rounded-xl editorial-shadow p-6 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-emerald-500"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-emerald-50 rounded-lg">
+<span class="material-symbols-outlined text-emerald-600">account_tree</span>
+</div>
+<span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full uppercase tracking-tighter">Insight</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-on-surface">Supply Ecosystem Mapping</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Visualizing the interdependencies of global supply networks and risk factors.</p>
+<div class="mt-4 rounded-lg overflow-hidden border border-outline-variant/10">
+<img class="w-full h-32 object-cover" data-alt="abstract architectural sketch of complex intersecting lines representing a global supply chain network in minimalist blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNqRYdGcuW_7lha4ZYa2oYUtZAG6gD7ug9tqdqifSqZ3dIJFL13PXl00AT-2Umo66URINTt59Sgy0ZntQF23Hj8IfiEIkDyT0CJVC2xIf1SC2lkgOOffddmvTL1r9ZMqby_HffbVi1kev2EGZbQhEy2Lfk7ov85nl6GslhFE2uMckFOXnPJ1wELDu4nM7HXf1vw2tKkLVTCazGgkFRd5PdtyhbeZ4waYU-73OyyaeyexHp2IEdRyv-JsldAuzKD6qGkOv6VNEqJy0"/>
+</div>
+</div>
+</section>
+<!-- Final Tips Callout -->
+<div class="bg-surface-container rounded-3xl p-8 mb-12 border border-outline-variant/10">
+<h4 class="font-bold text-secondary text-xs uppercase tracking-widest mb-4">Pro-Tips for 2026</h4>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-6 h-6 rounded-full hero-gradient flex items-center justify-center text-[10px] text-white font-bold">1</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Active Recall Only</p>
+<p class="text-xs text-on-surface-variant">Stop re-reading; start testing. Use the Practice module daily.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-6 h-6 rounded-full hero-gradient flex items-center justify-center text-[10px] text-white font-bold">2</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Contextual Interleaving</p>
+<p class="text-xs text-on-surface-variant">Mix different modules in one session to improve exam adaptability.</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 hero-gradient text-white font-bold py-4 rounded-full shadow-lg shadow-cyan-500/20 uppercase tracking-widest text-xs transition-transform active:scale-95">
+                    Start Revision Sprint
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-safe bg-white/85 dark:bg-slate-950/85 backdrop-blur-3xl shadow-[0_-12px_32px_rgba(15,23,42,0.06)] rounded-t-3xl z-50">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-cyan-500 dark:hover:text-cyan-300 scale-95 active:scale-90 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-[10px] uppercase font-bold tracking-widest mt-1">Dashboard</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-cyan-500 dark:hover:text-cyan-300 scale-95 active:scale-90 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined">library_books</span>
+<span class="text-[10px] uppercase font-bold tracking-widest mt-1">Modules</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-cyan-500 dark:hover:text-cyan-300 scale-95 active:scale-90 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined">quiz</span>
+<span class="text-[10px] uppercase font-bold tracking-widest mt-1">Practice</span>
+</div>
+<!-- Active Tab: Playbook -->
+<div class="flex flex-col items-center justify-center text-cyan-600 dark:text-cyan-400 after:content-[''] after:w-1 after:h-1 after:bg-cyan-500 after:rounded-full after:mt-1 scale-95 active:scale-90 transition-transform duration-150 cursor-pointer">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-[10px] uppercase font-bold tracking-widest mt-1">Playbook</span>
+</div>
+</nav>
+</body></html>

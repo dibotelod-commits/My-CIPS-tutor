@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Practice Terminal | CIPS Revision Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#57dffe",
+                        "on-tertiary-fixed": "#141d21",
+                        "on-background": "#131b2e",
+                        "on-tertiary-fixed-variant": "#3f484d",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "tertiary-container": "#141d21",
+                        "on-surface": "#131b2e",
+                        "on-secondary-fixed": "#001f26",
+                        "secondary": "#00687a",
+                        "outline": "#76777d",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "surface-dim": "#d2d9f4",
+                        "on-surface-variant": "#45464d",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eef0ff",
+                        "secondary-fixed": "#acedff",
+                        "on-secondary-container": "#006172",
+                        "inverse-surface": "#283044",
+                        "error": "#ba1a1a",
+                        "background": "#faf8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dae2fd",
+                        "surface": "#faf8ff",
+                        "on-tertiary-container": "#7c858b",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-primary-container": "#7c839b",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#565e74",
+                        "surface-container-high": "#e2e7ff",
+                        "surface-container-low": "#f2f3ff",
+                        "primary-container": "#131b2e",
+                        "tertiary-fixed": "#dbe4ea",
+                        "surface-container": "#eaedff",
+                        "inverse-primary": "#bec6e0",
+                        "tertiary": "#000000",
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-variant": "#dae2fd",
+                        "surface-container-highest": "#dae2fd",
+                        "primary": "#000000",
+                        "tertiary-fixed-dim": "#bfc8ce",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 flex items-center justify-between px-6 py-4 w-full bg-[#faf8ff]/85 backdrop-blur-xl shadow-[0_12px_32px_rgba(15,23,42,0.06)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#00687a] cursor-pointer active:scale-95 transition-transform" data-icon="menu">menu</span>
+<h1 class="font-['Inter'] font-bold tracking-tight text-lg text-[#0f172a]">CIPS Revision Hub</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-surface-container-low px-3 py-1.5 rounded-full">
+<span class="material-symbols-outlined text-[#00687a] text-sm" data-icon="timer">timer</span>
+<span class="text-sm font-semibold text-[#00687a]">24:58</span>
+</div>
+<span class="material-symbols-outlined text-[#00687a] cursor-pointer" data-icon="cloud_download">cloud_download</span>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Header Section: Progress & Context -->
+<div class="mb-8">
+<div class="flex justify-between items-end mb-4">
+<div>
+<span class="text-[10px] uppercase tracking-[0.1em] font-bold text-on-surface-variant mb-1 block">Module L5M4</span>
+<h2 class="text-2xl font-extrabold tracking-tight">Practice Terminal</h2>
+</div>
+<div class="text-right">
+<span class="text-sm font-medium text-on-surface-variant">Question 1 of 4</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-container w-1/4 rounded-full"></div>
+</div>
+</div>
+<!-- Dynamic Question Card: Multiple Choice (L5M9 Logic) -->
+<section class="mb-8">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_12px_32px_rgba(15,23,42,0.04)]">
+<p class="text-on-surface-variant leading-relaxed mb-8 text-lg font-medium">
+                    Which of the following best describes 'Category Management' in a procurement context?
+                </p>
+<!-- Options -->
+<div class="space-y-3">
+<div class="group flex items-center p-4 rounded-xl border border-outline-variant/15 hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant mr-4 flex items-center justify-center group-hover:border-secondary transition-colors">
+<span class="text-xs font-bold text-on-surface-variant group-hover:text-secondary">A</span>
+</div>
+<span class="text-on-surface font-medium">Buying only when items are needed.</span>
+</div>
+<div class="group flex items-center p-4 rounded-xl border-2 border-secondary bg-surface-container-low transition-all cursor-pointer">
+<div class="w-6 h-6 rounded-full bg-secondary mr-4 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-icon="check">check</span>
+</div>
+<span class="text-secondary font-bold">Organizing resources to focus on specific areas of spend.</span>
+</div>
+<div class="group flex items-center p-4 rounded-xl border border-outline-variant/15 hover:bg-surface-container-low transition-all cursor-pointer">
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant mr-4 flex items-center justify-center group-hover:border-secondary transition-colors">
+<span class="text-xs font-bold text-on-surface-variant group-hover:text-secondary">C</span>
+</div>
+<span class="text-on-surface font-medium">A method for downsizing procurement teams.</span>
+</div>
+</div>
+<!-- Feedback View (Visible after selection) -->
+<div class="mt-8 p-5 bg-secondary/5 rounded-xl border-l-4 border-secondary">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary" data-icon="verified">verified</span>
+<span class="font-bold text-secondary">Correct Explanation</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                        Category management is a strategic approach which organises resources to focus on specific areas of spends. This enables procurement teams to focus their time and conduct in depth market analysis to fully leverage their decisions on their goals.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Dynamic Question Card: Constructed Response (L5M4 Logic) -->
+<section class="mb-12">
+<div class="bg-surface-container-low rounded-xl p-6">
+<div class="flex items-center gap-2 mb-4">
+<span class="px-2 py-1 bg-on-background text-white text-[10px] font-bold rounded uppercase tracking-wider">Theory Task</span>
+<span class="text-xs font-medium text-on-surface-variant">Worth 10 Points</span>
+</div>
+<p class="text-on-surface font-bold text-lg mb-6 leading-tight">
+                    Discuss the impact of e-Sourcing on the traditional procurement cycle.
+                </p>
+<!-- Text Area Input -->
+<textarea class="w-full h-40 p-4 bg-surface-container-lowest border border-outline-variant/30 rounded-xl focus:ring-2 focus:ring-secondary focus:border-transparent transition-all outline-none text-on-surface-variant resize-none" placeholder="Type your response here..."></textarea>
+<!-- Action Button -->
+<div class="mt-6 flex justify-between items-center">
+<button class="text-secondary font-bold text-sm flex items-center gap-1 active:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+                        Reveal Model Answer
+                    </button>
+<button class="px-8 py-3 bg-gradient-to-r from-secondary to-secondary-container text-white font-bold rounded-full shadow-lg active:scale-95 transition-transform">
+                        Submit Answer
+                    </button>
+</div>
+<!-- Reveal State (Initially hidden) -->
+<div class="mt-8 pt-8 border-t border-outline-variant/10">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-bold text-on-surface">Model Answer</h4>
+<span class="text-xs font-bold text-secondary bg-secondary-fixed px-3 py-1 rounded-full">+10 Points Possible</span>
+</div>
+<div class="prose prose-sm text-on-surface-variant leading-relaxed">
+<p>E-sourcing streamlines the 'Identify Needs' and 'Supplier Selection' phases by providing automated platforms for RFP distribution and bid comparison. It increases transparency and reduces the cycle time by up to 30% through standardized digital workflows.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<footer class="fixed bottom-0 left-0 right-0 h-20 rounded-t-[1.5rem] z-50 bg-[#ffffff]/85 backdrop-blur-3xl shadow-[0_-12px_32px_rgba(15,23,42,0.06)] flex justify-around items-center px-4 pb-4">
+<div class="flex flex-col items-center gap-1 text-[#45464d] hover:bg-[#f2f3ff]/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Library</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#06b6d4] after:content-[''] after:w-1 after:h-1 after:bg-[#06b6d4] after:rounded-full cursor-pointer">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Practice</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#45464d] hover:bg-[#f2f3ff]/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="sync">sync</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Sync</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-[#45464d] hover:bg-[#f2f3ff]/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] font-medium">Profile</span>
+</div>
+</footer>
+</body></html>

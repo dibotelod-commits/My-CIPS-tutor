@@ -1,0 +1,11 @@
+{
+	"appId": "com.cips2026.revisionhub",
+	"appName": "CIPS 2026 Revision Hub",
+	"webDir": "www",
+	"server": {
+		"androidScheme": "https"
+	},
+	"android": {
+		"allowMixedContent": true
+	}
+}

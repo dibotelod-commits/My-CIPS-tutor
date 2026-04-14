@@ -1,0 +1,55 @@
+/**
+ * API Configuration for CIPS Study Materials
+ * Used to fetch remote JSON study sets, mock exams, and syllabus updates.
+ */
+
+
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://api.cips-revision-hub.com/v1';
+
+
+export const API_ENDPOINTS = {
+    L5M4_QUIZ: `${API_BASE_URL}/materials/l5m4/quiz`,
+    L5M9_QUIZ: `${API_BASE_URL}/materials/l5m9/quiz`,
+    SYLLABUS_NOTES: `${API_BASE_URL}/materials/notes`,
+    USER_PROGRESS: `${API_BASE_URL}/users/progress`
+};
+
+
+/**
+ * Generic fetch wrapper with basic error handling
+ */
+async function fetchFromApi(endpoint, options = {}) {
+    try {
+        const response = await fetch(endpoint, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            ...options
+        });
+
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        return await response.json();
+    } catch (error) {
+        console.error(`Error fetching data from ${endpoint}:`, error);
+        throw error;
+    }
+}
+
+
+// Exportable functions for front-end integration
+export const getL5M4QuizData = () => fetchFromApi(API_ENDPOINTS.L5M4_QUIZ);
+export const getL5M9QuizData = () => fetchFromApi(API_ENDPOINTS.L5M9_QUIZ);
+export const getStudyNotes = (moduleId) => fetchFromApi(`${API_ENDPOINTS.SYLLABUS_NOTES}/${moduleId}`);
+
+
+export const saveUserProgress = (userId, scoreData) => {
+    return fetchFromApi(API_ENDPOINTS.USER_PROGRESS, {
+        method: 'POST',
+        body: JSON.stringify({ userId, ...scoreData })
+    });
+};

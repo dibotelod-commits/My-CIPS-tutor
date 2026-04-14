@@ -1,0 +1,82 @@
+# Capacitor Integration & Android 8.1 (API 27) Configuration Guide
+
+This document outlines the steps to integrate Capacitor into your CIPS 2026 Revision Hub and ensure it runs smoothly on Android 8.1 (API 27) devices.
+
+## 1. Project Configuration
+
+### `capacitor.config.json`
+Create this file in your project root:
+```json
+{
+  "appId": "com.example.app",
+  "appName": "MyApp",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  }
+}
+```
+
+## 2. Android Build Configuration (Gradle)
+
+### `android/variables.gradle`
+Ensure these versions are set for API 27 compatibility:
+```gradle
+ext {
+    minSdkVersion = 21
+    compileSdkVersion = 33
+    targetSdkVersion = 33
+    androidxActivityVersion = '1.7.0'
+    androidxAppCompatVersion = '1.6.1'
+    androidxCoordinatorLayoutVersion = '1.2.0'
+    androidxCoreVersion = '1.10.0'
+    androidxFragmentVersion = '1.5.6'
+    junitVersion = '4.13.2'
+    androidxJunitVersion = '1.1.5'
+    androidxEspressoCoreVersion = '3.5.1'
+    cordovaAndroidVersion = '10.1.1'
+}
+```
+
+### `android/app/build.gradle`
+```gradle
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.example.app"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        // ...
+    }
+}
+```
+
+## 3. WebView & Fallback Support
+Android 8.1 uses an older version of the System WebView. Capacitor v3+ handles most polyfills, but for complex CSS/JS:
+- Use **Babel** to transpile JavaScript to ES5.
+- Ensure **Tailwind CSS** is configured with Autoprefixer.
+- Avoid using very new Web APIs without checking compatibility.
+
+## 4. Initialization in `index.html`
+Add this before your closing `</body>` tag:
+```html
+<script src="capacitor.js"></script>
+<script>
+  // Initialize Capacitor plugins here
+  window.addEventListener('DOMContentLoaded', () => {
+    console.log('Capacitor App Initialized');
+  });
+</script>
+```
+
+## 5. Performance Optimization (Snapdragon 450)
+- **Image Optimization:** Use WebP format.
+- **Lazy Loading:** Load sections of the app only when needed.
+- **Minimize DOM:** Keep the HTML structure lean.
+- **Memory Management:** Clear intervals and event listeners on page transitions.
+
+## 6. Dark Mode Implementation
+The app has been updated with a system-aware dark mode using Tailwind's `dark:` utility classes. The background and text colors will automatically shift based on the device's theme settings or the app-level toggle in Profile Settings.

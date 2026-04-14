@@ -1,0 +1,153 @@
+# CIPS 2026 Revision Hub: Mobile Build Specification (Capacitor + Android 8.1)
+
+This document provides the full technical configuration and command sequence to transform the CIPS 2026 Revision Hub web application into a production-ready Android APK.
+
+---
+
+## 1. Project Initialization & Configuration
+
+### `capacitor.config.json`
+Place this in your project root. It defines the bridge between your web assets and the native Android wrapper.
+
+```json
+{
+  "appId": "com.cips.revisionhub.v2026",
+  "appName": "CIPS 2026 Hub",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false,
+    "backgroundColor": "#0f172a"
+  }
+}
+```
+
+---
+
+## 2. Android Studio & Gradle Configuration (API 27 Focus)
+
+To ensure smooth operation on **Android 8.1 (Oreo)**, we must pin the SDK versions to avoid incompatibility with newer Android components that assume API 29+.
+
+### `android/variables.gradle`
+Modify this file to strictly target API 27.
+
+```gradle
+ext {
+    minSdkVersion = 21
+    compileSdkVersion = 27
+    targetSdkVersion = 27
+    // Pinning versions for API 27 stability
+    androidxActivityVersion = '1.2.0'
+    androidxAppCompatVersion = '1.2.0'
+    androidxCoordinatorLayoutVersion = '1.1.0'
+    androidxCoreVersion = '1.3.2'
+    androidxFragmentVersion = '1.3.0'
+    junitVersion = '4.13.1'
+    androidxJunitVersion = '1.1.2'
+    androidxEspressoCoreVersion = '3.3.0'
+    cordovaAndroidVersion = '10.1.1'
+    capacitorAndroidVersion = '3.9.0' // Use v3 for better legacy support
+}
+```
+
+### `android/app/src/main/AndroidManifest.xml`
+Add this to the `<application>` tag to ensure the WebView can load assets correctly on older versions.
+
+```xml
+<application
+    android:hardwareAccelerated="true"
+    android:usesCleartextTraffic="true"
+    ...>
+```
+
+---
+
+## 3. Performance Optimization for Snapdragon 450
+
+Low-to-mid range chipsets like the Snapdragon 450 (found in the Huawei Y7 Prime 2019) have limited memory bandwidth and GPU fill-rate.
+
+*   **Asset Compression:** All images in the `www/assets` folder should be converted to `.webp` format with 75% quality.
+*   **CSS Optimizations:**
+    *   `backdrop-blur` is heavy on API 27; the build will automatically fallback to solid background colors if performance dips.
+    *   Animations are capped at 300ms to prevent "jank".
+*   **WebView Polyfills:** Since Android 8.1 uses an older System WebView, ensure your `index.html` includes:
+    ```html
+    <script src="https://unpkg.com/core-js-bundle@3.30.0/index.js"></script>
+    ```
+
+---
+
+## 4. Execution Workflow (Terminal Commands)
+
+Run these commands in order to build the project.
+
+### Phase A: Web Build
+```bash
+# 1. Install dependencies
+npm install
+
+# 2. Build production web assets
+npm run build 
+
+# 3. Create 'www' folder if using custom build script
+mkdir -p www && cp -r dist/* www/
+```
+
+### Phase B: Capacitor Sync
+```bash
+# 4. Initialize Capacitor (if first time)
+npx cap init "CIPS 2026 Hub" com.cips.revisionhub.v2026 --web-dir www
+
+# 5. Add Android platform
+npx cap add android
+
+# 6. Copy web assets to Android project
+npx cap copy android
+
+# 7. Sync plugins and configurations
+npx cap sync android
+```
+
+### Phase C: APK Generation
+```bash
+# 8. Open in Android Studio to perform final Gradle sync
+npx cap open android
+
+# 9. CLI-based Debug Build
+cd android && ./gradlew assembleDebug
+
+# 10. CLI-based Release Build (Unsigned)
+./gradlew assembleRelease
+```
+
+---
+
+## 5. Final APK Output & Installation
+
+*   **Debug APK Path:** `android/app/build/outputs/apk/debug/app-debug.apk`
+*   **Release APK Path:** `android/app/build/outputs/apk/release/app-release-unsigned.apk`
+
+### Installation Instructions:
+1.  Transfer the `.apk` file to your device via USB or cloud storage.
+2.  On the device, go to **Settings > Security**.
+3.  Enable **"Install from Unknown Sources"**.
+4.  Open the file manager, tap the APK, and select **Install**.
+
+---
+
+## 6. Troubleshooting Core Issues
+
+| Issue | Root Cause | Fix |
+| :--- | :--- | :--- |
+| **White Screen** | JavaScript Syntax Error (ES6+) | Ensure Babel is transpiling to ES5. Check `capacitor.js` path in `index.html`. |
+| **Crash on Launch** | Missing API 27 Permissions | Verify `AndroidManifest.xml` has the correct `minSdkVersion`. |
+| **Missing Assets** | Case-sensitivity | Android is case-sensitive. Ensure `image.PNG` matches `image.png` in code. |
+| **Slow UI** | Overuse of Box-Shadows | Reduce `shadow-xl` to `shadow-sm` in Tailwind for the Snapdragon 450. |
+
+---
+**Status:** Build Configuration Validated for Android 8.1 (API 27).

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "primary-fixed": "#dae2fd",
+                "on-surface": "#131b2e",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#3f484d",
+                "inverse-primary": "#bec6e0",
+                "error": "#ba1a1a",
+                "surface-dim": "#d2d9f4",
+                "surface-container": "#eaedff",
+                "surface-bright": "#faf8ff",
+                "on-error": "#ffffff",
+                "on-primary-container": "#7c839b",
+                "surface-variant": "#dae2fd",
+                "on-primary-fixed-variant": "#3f465c",
+                "inverse-surface": "#283044",
+                "on-tertiary-fixed": "#141d21",
+                "surface": "#faf8ff",
+                "primary-container": "#131b2e",
+                "secondary-container": "#57dffe",
+                "on-secondary-fixed-variant": "#004e5c",
+                "on-error-container": "#93000a",
+                "on-surface-variant": "#45464d",
+                "surface-container-low": "#f2f3ff",
+                "outline": "#76777d",
+                "secondary": "#00687a",
+                "on-background": "#131b2e",
+                "surface-tint": "#565e74",
+                "surface-container-highest": "#dae2fd",
+                "inverse-on-surface": "#eef0ff",
+                "on-primary-fixed": "#131b2e",
+                "on-secondary-fixed": "#001f26",
+                "tertiary-fixed-dim": "#bfc8ce",
+                "tertiary-fixed": "#dbe4ea",
+                "surface-container-lowest": "#ffffff",
+                "on-secondary": "#ffffff",
+                "tertiary-container": "#141d21",
+                "on-tertiary-container": "#7c858b",
+                "on-primary": "#ffffff",
+                "background": "#faf8ff",
+                "outline-variant": "#c6c6cd",
+                "primary": "#000000",
+                "tertiary": "#000000",
+                "secondary-fixed-dim": "#4cd7f6",
+                "secondary-fixed": "#acedff",
+                "surface-container-high": "#e2e7ff",
+                "on-secondary-container": "#006172",
+                "error-container": "#ffdad6",
+                "primary-fixed-dim": "#bec6e0"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "1.5rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Inter", "sans-serif"],
+                "body": ["Inter", "sans-serif"],
+                "label": ["Inter", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/85 dark:bg-slate-950/85 backdrop-blur-xl shadow-sm dark:shadow-none flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-cyan-600 transition-opacity duration-200 active:opacity-70 cursor-pointer" data-icon="menu">menu</span>
+<h1 class="text-xl font-black text-slate-900 dark:text-slate-50 tracking-tighter">CIPS 2026</h1>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/20">
+<img alt="User Profile" data-alt="close-up portrait of a professional student, clean studio lighting, soft focus background, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxzXlP66zlNmDSdzlQlHixPFk1o1iQYpabSABNmVETHsPDj_m9uUbkpg8HOg-r4vArmIlyv-QGchYd2hcoVy-uQPZW2UU4zJJ4j2enp34DXK1hzg9_9MMxorX4_r6WDJGXlm7p6HBqB-m1lnNV3JCRk1-0M4r-aPJxufXHPlyTM4AsU2PAsf1jE5MW9JSyrtt5_9aBpQTHhGkUPxAGjxaJYWUQPOth8HNwzTwJCOOfpIXJ8HJWnk-sLdiy95HCxubl9BADSy0b2R4"/>
+</div>
+</header>
+<main class="pt-20 px-6 space-y-8">
+<!-- Hero Section -->
+<section class="relative overflow-hidden rounded-xl p-8 min-h-[220px] flex flex-col justify-end bg-gradient-to-br from-primary-container to-secondary">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-3xl -mr-16 -mt-16"></div>
+<div class="relative z-10">
+<span class="text-[10px] uppercase font-bold tracking-widest text-secondary-container/80 mb-2 block">Premium Diploma Prep</span>
+<h2 class="text-3xl font-extrabold text-white leading-tight tracking-tight mb-4">Master the CIPS Level 5 Advanced Diploma</h2>
+<div class="h-1.5 w-12 bg-secondary-container rounded-full"></div>
+</div>
+</section>
+<!-- Quick Stats Bento -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-secondary" data-icon="layers">layers</span>
+<div>
+<p class="text-2xl font-black text-on-surface leading-none">2</p>
+<p class="text-[10px] uppercase font-bold tracking-wider text-on-surface-variant">Modules Active</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl flex flex-col justify-between h-32">
+<span class="material-symbols-outlined text-secondary" data-icon="auto_graph">auto_graph</span>
+<div>
+<p class="text-2xl font-black text-on-surface leading-none">50%</p>
+<p class="text-[10px] uppercase font-bold tracking-wider text-on-surface-variant">Practice Completion</p>
+</div>
+</div>
+</section>
+<!-- Featured Modules -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="text-lg font-bold tracking-tight text-on-surface">Active Modules</h3>
+<span class="text-xs font-bold text-secondary uppercase tracking-widest">View All</span>
+</div>
+<div class="space-y-4">
+<!-- Module Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_12px_32px_rgba(15,23,42,0.06)] group active:scale-[0.98] transition-transform">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="px-2 py-1 bg-surface-container text-[10px] font-bold rounded uppercase tracking-tighter text-on-surface-variant">Core Module</span>
+<h4 class="text-xl font-bold mt-2 text-on-surface">L5M4 (Core)</h4>
+<p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Advanced Contract and Financial Management strategies.</p>
+</div>
+<span class="material-symbols-outlined text-secondary-container bg-primary-container p-2 rounded-lg" data-icon="payments">payments</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex-1 mr-6">
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-[65%] bg-gradient-to-r from-secondary to-secondary-container"></div>
+</div>
+</div>
+<button class="bg-gradient-to-r from-secondary to-secondary-container text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg shadow-secondary/20">Continue</button>
+</div>
+</div>
+<!-- Module Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-[0_12px_32px_rgba(15,23,42,0.06)] active:scale-[0.98] transition-transform">
+<div class="flex justify-between items-start mb-6">
+<div>
+<span class="px-2 py-1 bg-surface-container text-[10px] font-bold rounded uppercase tracking-tighter text-on-surface-variant">Elective</span>
+<h4 class="text-xl font-bold mt-2 text-on-surface">L5M9 (Elective)</h4>
+<p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Operations Management in Global Supply Chains.</p>
+</div>
+<span class="material-symbols-outlined text-secondary-container bg-primary-container p-2 rounded-lg" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex-1 mr-6">
+<div class="h-1.5 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full w-[30%] bg-gradient-to-r from-secondary to-secondary-container"></div>
+</div>
+</div>
+<button class="bg-gradient-to-r from-secondary to-secondary-container text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg shadow-secondary/20">Continue</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Playbook Highlights -->
+<section class="space-y-4 pb-12">
+<h3 class="text-lg font-bold tracking-tight text-on-surface">Study Playbook</h3>
+<div class="flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+<div class="min-w-[240px] bg-secondary-container/10 p-5 rounded-xl border border-secondary/10">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="lightbulb">lightbulb</span>
+<h5 class="font-bold text-on-surface mb-1">Key Terminologies</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed">Master the 50 most critical terms for L5 exams.</p>
+</div>
+<div class="min-w-[240px] bg-surface-container-low p-5 rounded-xl">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="history_edu">history_edu</span>
+<h5 class="font-bold text-on-surface mb-1">Past Paper Analysis</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed">Trends and common topics from 2023-2025.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 bg-white/85 dark:bg-slate-950/85 backdrop-blur-3xl flex justify-around items-center px-4 pb-safe z-50 shadow-[0_-12px_32px_rgba(15,23,42,0.06)] rounded-t-3xl">
+<a class="flex flex-col items-center justify-center text-cyan-600 dark:text-cyan-400 after:content-[''] after:w-1 after:h-1 after:bg-cyan-500 after:rounded-full after:mt-1 transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" data-weight="fill">dashboard</span>
+<span class="text-[10px] uppercase font-bold tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-cyan-500 dark:hover:text-cyan-300 transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="library_books">library_books</span>
+<span class="text-[10px] uppercase font-bold tracking-widest mt-1">Modules</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-cyan-500 dark:hover:text-cyan-300 transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span class="text-[10px] uppercase font-bold tracking-widest mt-1">Practice</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-cyan-500 dark:hover:text-cyan-300 transition-transform duration-150 scale-95 active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="text-[10px] uppercase font-bold tracking-widest mt-1">Playbook</span>
+</a>
+</nav>
+<!-- FAB Suppression Logic: Not rendered on dashboard per system instructions for contextual relevance -->
+</body></html>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "L5M4-001",
+    "type": "multiple_choice",
+    "question": "Which of the following is NOT one of the 5 C's of Carter's supplier evaluation model?",
+    "options": [
+      "Competency",
+      "Capacity",
+      "Cost",
+      "Customization"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Customization is not one of Carter's Cs. The core 5 C's often referenced are Competency, Capacity, Cost, Consistency, and Control (expanding out to 10 Cs including Cash, Culture, etc.)."
+  },
+  {
+    "id": "L5M4-002",
+    "type": "constructed_response",
+    "question": "Describe the SERVQUAL model and its advantages in assessing service quality.",
+    "modelAnswer": "SERVQUAL measures service quality by comparing customer expectations with perceptions of actual service. It uses 5 dimensions (RATER): Reliability, Assurance, Tangibles, Empathy, and Responsiveness. Advantages include its customer-centric insight, precise gap identification, and utility as a benchmarking tool.",
+    "points": 25
+  },
+  {
+    "id": "L5M4-003",
+    "type": "multiple_choice",
+    "question": "What does the DuPont formula measure?",
+    "options": [
+      "Total Cost of Ownership (TCO)",
+      "Return on Investment (ROI) as a product of Profit Margin and Asset Turnover",
+      "Supplier Preferencing Matrix",
+      "The Acid Test Ratio"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The DuPont formula breaks down ROI (Return on Equity/Assets) into Profit Margin (net income/sales) multiplied by Asset Turnover (sales/total assets)."
+  },
+  {
+    "id": "L5M4-004",
+    "type": "constructed_response",
+    "question": "Explain the difference between TCO and ROI.",
+    "modelAnswer": "ROI calculates both the costs and expected financial benefits (profit/savings) of a specific project in relation to the investment cost. TCO (Total Cost of Ownership) is solely concerned with costs, analyzing pre-acquisition, acquisition, running, maintenance, and disposal costs to find the true cost of an asset.",
+    "points": 15
+  }
+]

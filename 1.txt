@@ -1,0 +1,54 @@
+[
+  {
+    "id": "L5M9-001",
+    "type": "multiple_choice",
+    "question": "Which of the following describes the 'Visibility' dimension in operations processes?",
+    "options": [
+      "The range and assortment of products produced.",
+      "How much the demand varies over a period of time.",
+      "How much customers directly experience the company's processes.",
+      "The quantity of products and services produced."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Visibility focuses on how much the process is exposed to the customer. High visibility processes (like retail or healthcare) involve direct customer contact, whereas low visibility (like back-end manufacturing) does not."
+  },
+  {
+    "id": "L5M9-002",
+    "type": "multiple_choice",
+    "question": "What is the target failure rate for the Six Sigma methodology?",
+    "options": [
+      "Zero defects",
+      "3.4 units in every 1 million units produced",
+      "1 unit in every 100,000 units produced",
+      "99% perfection"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Six Sigma aims for 99.9997% perfection, which translates to a failure rate of only 3.4 defects per million opportunities (DPMO)."
+  },
+  {
+    "id": "L5M9-003",
+    "type": "multiple_choice",
+    "question": "Which plant layout groups machines together based on similar processing requirements?",
+    "options": [
+      "Fixed-position layout",
+      "Functional (job-shop) layout",
+      "Cell layout",
+      "Product (line/flow) layout"
+    ],
+    "correctAnswer": 2,
+    "explanation": "In a Cell layout, machines are grouped together based on similar processing requirements into 'cells'. After undergoing transformation in one cell, inputs move to another cell."
+  },
+  {
+    "id": "L5M9-004",
+    "type": "multiple_choice",
+    "question": "Under the JIT (Just In Time) approach, which system of inventory management is used?",
+    "options": [
+      "Push system",
+      "Pull system",
+      "Buffer system",
+      "Anticipation system"
+    ],
+    "correctAnswer": 1,
+    "explanation": "JIT uses a pull system. Production does not commence until an order is received, essentially 'pulling' inventory through the system based on actual customer demand."
+  }
+]
